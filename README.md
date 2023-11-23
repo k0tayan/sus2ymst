@@ -1,5 +1,22 @@
 # sus2ymst
+
+[![PyPI - Version](https://img.shields.io/pypi/v/sus2ymst.svg)](https://pypi.org/project/sus2ymst/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sus2ymst)
+
 Convert Ched SUS to YMST(world dai star) txt chart format.
+
+## Installation
+```bash
+pip install sus2ymst
+```
+
+## Usage
+```python
+from sus2ymst.convert import *
+
+sus2ymst = Sus2Ymst()
+notation_txt = sus2ymst.loads(sus_text)
+```
 
 
 ## Chart specifications

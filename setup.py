@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="sus2ymst",  # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     install_requires=[
         "sus-io",
     ],
