@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="sus2ymst",  # Replace with your own username
-    version="0.0.2",
+    version="0.0.3",
     install_requires=[
         "sus-io",
     ],
     entry_points={
         "console_scripts": [
-            "sus2ymst=sus2ymst:main",
+            "sus2ymst=sus2ymst.cli:main",
         ],
     },
     author="k0tayan",
