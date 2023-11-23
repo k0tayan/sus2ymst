@@ -12,10 +12,13 @@ pip install sus2ymst
 
 ## Usage
 ```python
-from sus2ymst.convert import *
+import sus2ymst
 
-sus2ymst = Sus2Ymst()
-notation_txt = sus2ymst.loads(sus_text)
+with open("test.sus", "r") as f:
+    sus_text = f.read()
+    notation_text, error = sus2ymst.loads(sus_text)
+    print(notation_text)
+    print(error)
 ```
 
 
