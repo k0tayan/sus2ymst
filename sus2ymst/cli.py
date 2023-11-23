@@ -13,11 +13,19 @@ def main():
         default="notation.txt",
         required=False,
     )
+    parser.add_argument(
+        "-l",
+        "--lane_offset",
+        help="lane offset",
+        default=2,
+        required=False,
+        type=int,
+    )
     args = parser.parse_args()
 
     sus2ymst = Sus2Ymst()
 
-    notation_txt = sus2ymst.load(args.sus_file)
+    notation_txt = sus2ymst.load(args.sus_file, args.lane_offset)
 
     error_messages: list[ErrorMessage] = sus2ymst.get_error_messages()
     if error_messages:

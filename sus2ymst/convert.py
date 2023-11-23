@@ -30,17 +30,17 @@ class Sus2Ymst:
     def __init__(self):
         pass
 
-    def load(self, filename: str):
+    def load(self, filename: str, lane_offset=2):
         with open(filename, "r") as file:
             text = file.read()
-        return self.loads(text)
+        return self.loads(text, lane_offset=lane_offset)
 
-    def loads(self, text: str) -> str:
+    def loads(self, text: str, lane_offset=2) -> str:
         self.score: sus.Score = sus.loads(text)
         self.score_text = text
         self.split_ids = SplitIds
         self.error_messages = []
-        notation_text = self.__convert()
+        notation_text = self.__convert(lane_offset=lane_offset)
         return notation_text
 
     def __on_hold_start(self, note: sus.Note):
