@@ -19,7 +19,7 @@ setuptools.setup(
     description="Convert Ched SUS to YMST(world dai star) txt chart format.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/k0tayan/sus2ymst",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
